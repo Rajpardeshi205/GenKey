@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        terraform 'terraform'
+    }
+
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
         AWS_CREDS          = credentials('aws-credentials')
